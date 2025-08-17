@@ -16,7 +16,7 @@ export default function MealDetailPage({ params }) {
 			<header className={classes.header}>
 				<div className={classes.image}>
 					<Image
-						src={meal.image}
+						src={`https://sanjibadhya-demo-next-foodie-app-images.s3.eu-north-1.amazonaws.com/${meal.image}`}
 						alt={meal.title}
 						fill
 					/>
@@ -34,7 +34,8 @@ export default function MealDetailPage({ params }) {
 					className={classes.instructions}
 					dangerouslySetInnerHTML={{
 						__html: meal.instructions,
-					}}></p>
+					}}
+				></p>
 			</main>
 		</>
 	);
